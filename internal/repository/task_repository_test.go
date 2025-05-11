@@ -43,13 +43,13 @@ func TestInMemoryTaskRepository_GetTasks(t *testing.T) {
 		}
 	}
 
-	tasks, err := repo.GetAllTasks()
+	tasksAll, err := repo.GetAllTasks()
 	if err != nil {
 		t.Errorf("GetTasks() error = %v", err)
 	}
 
 	assert.NoError(t, err)
-	assert.Len(t, tasks, 2)
+	assert.Len(t, tasksAll, 2)
 }
 
 func TestInMemoryTaskRepository_DeleteTask(t *testing.T) {
